@@ -1,16 +1,47 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { SiteLayout } from "@/components/layout/SiteLayout";
+import { Seo } from "@/components/Seo";
+import { Hero } from "@/components/sections/Hero";
+import { SegmentSelector } from "@/components/sections/SegmentSelector";
+import { QuickBooking } from "@/components/sections/QuickBooking";
+import { FeaturedFleet } from "@/components/sections/FeaturedFleet";
+import { WhyUs } from "@/components/sections/WhyUs";
+import { HowItWorks } from "@/components/sections/HowItWorks";
+import { PriceCalculator } from "@/components/sections/PriceCalculator";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { Faq } from "@/components/sections/Faq";
+import { FinalCta } from "@/components/sections/FinalCta";
+import { SITE } from "@/config/site";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: SITE.name,
+    description: "Inchirieri masini, scutere si biciclete electrice pentru soferi Uber, Bolt si curieri Glovo, Wolt, Bolt Food.",
+    address: { "@type": "PostalAddress", streetAddress: SITE.address, addressLocality: SITE.city, addressCountry: "RO" },
+    telephone: SITE.phoneE164,
+    areaServed: SITE.city,
+  };
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <SiteLayout>
+      <Seo
+        title="DrivePartner | Inchiriere masini si scutere pentru Uber, Bolt si curieri"
+        description="Inchiriaza masini, scutere si biciclete electrice pentru Uber, Bolt, Glovo si Wolt. Asistenta 24/7, asigurare completa, vehicul gata in 24h."
+        path="/"
+        jsonLd={jsonLd}
+      />
+      <Hero />
+      <QuickBooking />
+      <SegmentSelector />
+      <FeaturedFleet />
+      <WhyUs />
+      <HowItWorks />
+      <PriceCalculator />
+      <Testimonials />
+      <Faq />
+      <FinalCta />
+    </SiteLayout>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
