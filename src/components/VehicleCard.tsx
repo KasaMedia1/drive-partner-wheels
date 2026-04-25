@@ -14,11 +14,16 @@ const categoryIcon = {
 interface Props {
   vehicle: Vehicle;
   index?: number;
+  /** When provided, the "Detalii" button links to the dedicated product page. */
+  categorySlug?: string;
 }
 
-export function VehicleCard({ vehicle, index = 0 }: Props) {
+export function VehicleCard({ vehicle, index = 0, categorySlug }: Props) {
   const Icon = categoryIcon[vehicle.category];
   const available = vehicle.availability === "disponibil";
+  const detailsHref = categorySlug
+    ? `/inchiriere/${categorySlug}/${vehicle.slug}`
+    : `/rezerva/${vehicle.slug}`;
 
   return (
     <motion.article
@@ -96,7 +101,7 @@ export function VehicleCard({ vehicle, index = 0 }: Props) {
 
         <div className="mt-4 flex gap-2">
           <Button asChild variant="outline" size="sm" className="flex-1">
-            <Link to={`/rezerva/${vehicle.slug}`}>Detalii</Link>
+            <Link to={detailsHref}>Detalii</Link>
           </Button>
           <Button asChild size="sm" className="flex-1">
             <Link to={`/rezerva/${vehicle.slug}`}>Rezerva</Link>
