@@ -63,7 +63,7 @@ export function RentalCategoriesPreview() {
               transition={{ duration: 0.5, delay: Math.min(i * 0.06, 0.3) }}
             >
               <Link
-                to={`/inchiriere#${c.hash}`}
+                to={`/inchiriere/${c.hash}`}
                 className="group relative block h-full overflow-hidden rounded-2xl border border-border bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-elevate"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-muted">
