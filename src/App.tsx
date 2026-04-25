@@ -5,6 +5,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Inchiriere from "./pages/Inchiriere.tsx";
+import InchiriereCategorie from "./pages/InchiriereCategorie.tsx";
+import VehicleDetail from "./pages/VehicleDetail.tsx";
 import Flota from "./pages/Flota.tsx";
 import CalculatorUber from "./pages/CalculatorUber.tsx";
 import CalculatorCurieri from "./pages/CalculatorCurieri.tsx";
@@ -24,6 +26,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/inchiriere" element={<Inchiriere />} />
+          <Route path="/inchiriere/:categorie" element={<InchiriereCategorie />} />
+          <Route path="/inchiriere/:categorie/:slug" element={<VehicleDetail />} />
           <Route path="/flota" element={<Flota />} />
           <Route path="/calculator-uber" element={<CalculatorUber />} />
           <Route path="/calculator-curieri" element={<CalculatorCurieri />} />
