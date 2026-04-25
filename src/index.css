@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* DrivePartner design system. Strict palette: orange/white/black/mint. All HSL. */
+/* DriveRent design system. Strict palette: orange/white/black/mint. All HSL. */
 
 @layer base {
   :root {

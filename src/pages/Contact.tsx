@@ -25,7 +25,7 @@ const Contact = () => {
   });
 
   const onSubmit = (v: z.infer<typeof schema>) => {
-    const text = `Mesaj de pe site DrivePartner\nNume: ${v.nume}\nTelefon: ${v.telefon}\n\n${v.mesaj}`;
+    const text = `Mesaj de pe site DriveRent\nNume: ${v.nume}\nTelefon: ${v.telefon}\n\n${v.mesaj}`;
     window.open(whatsappLink(text), "_blank", "noopener,noreferrer");
     toast({ title: "Mesaj trimis pe WhatsApp", description: "Te sunam in maxim 1 ora." });
     form.reset();
@@ -33,7 +33,7 @@ const Contact = () => {
 
   return (
     <SiteLayout>
-      <Seo title="Contact DrivePartner | Bucuresti" description="Contacteaza echipa DrivePartner. Telefon, WhatsApp, email si adresa biroului din Bucuresti." path="/contact" />
+      <Seo title="Contact DriveRent | Bucuresti" description="Contacteaza echipa DriveRent. Telefon, WhatsApp, email si adresa biroului din Bucuresti." path="/contact" />
 
       <section className="container-page py-14 lg:py-20 grid gap-10 lg:grid-cols-[1fr_1.2fr]">
         <div>

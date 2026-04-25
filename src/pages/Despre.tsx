@@ -20,7 +20,7 @@ const values = [
 
 const Despre = () => (
   <SiteLayout>
-    <Seo title="Despre DrivePartner | Inchirieri pentru soferi si curieri" description="DrivePartner sustine soferii Uber, Bolt si curierii Glovo, Wolt din Bucuresti cu vehicule de calitate si suport real." path="/despre" />
+    <Seo title="Despre DriveRent | Inchirieri pentru soferi si curieri" description="DriveRent sustine soferii Uber, Bolt si curierii Glovo, Wolt din Bucuresti cu vehicule de calitate si suport real." path="/despre" />
 
     <section className="relative overflow-hidden gradient-soft">
       <div className="container-page py-16 lg:py-24">
@@ -30,7 +30,7 @@ const Despre = () => (
             Construim infrastructura pentru <span className="gradient-text">economia gig</span> din Romania.
           </h1>
           <p className="mt-5 text-lg text-muted-foreground">
-            Am pornit DrivePartner in 2020, dupa ce am vazut cati prieteni nu pot incepe sa livreze sau sa faca Uber pentru ca le lipsea masina sau scuterul. Astazi suntem partenerul de zi cu zi pentru sute de soferi si curieri din Bucuresti.
+            Am pornit DriveRent in 2020, dupa ce am vazut cati prieteni nu pot incepe sa livreze sau sa faca Uber pentru ca le lipsea masina sau scuterul. Astazi suntem partenerul de zi cu zi pentru sute de soferi si curieri din Bucuresti.
           </p>
         </motion.div>
       </div>
