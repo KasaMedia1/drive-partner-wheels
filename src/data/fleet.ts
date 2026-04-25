@@ -104,7 +104,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Hybrid 138 CP", "Cutie e-CVT", "Consum sub 5L"],
     included: COMMON_INCLUDED_CAR,
     rules: ["Minim 23 ani", "Permis de minim 3 ani", "Garantie 2000 lei"],
-    images: [corolla, corolla2],
+    images: [corolla1, corolla2, corolla3],
   },
   {
     id: "toyota-camry-hybrid",
