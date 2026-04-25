@@ -1,55 +1,43 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Bike, Car, Gauge, KeyRound, Truck, Zap } from "lucide-react";
+import { ArrowUpRight, Bike, Car, Gauge, KeyRound } from "lucide-react";
+import pcx from "@/assets/fleet/pcx125.jpg";
+import breezy from "@/assets/fleet/breezy.jpg";
+import kisbee from "@/assets/fleet/kisbee.jpg";
+import corolla from "@/assets/fleet/corolla.jpg";
 
 const categories = [
   {
     hash: "scutere-125",
     title: "Scutere 125cc",
     Icon: Gauge,
-    desc: "Mai multa putere pentru curieri activi si ture lungi prin tot orasul.",
+    desc: "Honda PCX, SYM Symphony, Daytona Trevis si Jet X Pro. Putere si autonomie pentru ture lungi.",
     audience: "Recomandat pentru: curieri Glovo, Wolt, Bolt Food cu volum constant.",
-    image: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=1200&auto=format&fit=crop",
+    image: pcx,
   },
   {
     hash: "scutere-50",
     title: "Scutere 50cc",
     Icon: Bike,
-    desc: "Compacte, economice, ideale pentru livrari rapide si trafic aglomerat.",
-    audience: "Recomandat pentru: curieri incepatori si zone urbane dense.",
-    image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?q=80&w=1200&auto=format&fit=crop",
+    desc: "Motron Breezy, Kymco Agility, SYM Symphony si X Pro. Compacte, economice, agile in trafic.",
+    audience: "Recomandat pentru: curieri activi si zone urbane dense.",
+    image: breezy,
   },
   {
     hash: "fara-permis",
     title: "Scutere fara permis",
     Icon: KeyRound,
-    desc: "Mopede 50cc accesibile inclusiv categoriei AM, fara cerinta A1.",
+    desc: "Peugeot Kisbee si Tweet, SYM Fiddle, Kymco Like si Agility, modele retro. Limitate 25 km/h.",
     audience: "Recomandat pentru: navetisti si livratori la inceput de drum.",
-    image: "https://images.unsplash.com/photo-1525160354320-d8e92641c563?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    hash: "electrice",
-    title: "Scutere electrice",
-    Icon: Zap,
-    desc: "Zero combustibil, costuri minime de operare, baterii detasabile.",
-    audience: "Recomandat pentru: livrari urbane scurte si medii, cu costuri mici.",
-    image: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    hash: "biciclete",
-    title: "Biciclete electrice",
-    Icon: Bike,
-    desc: "Mobilitate moderna pentru zone aglomerate, fara permis si costuri minime.",
-    audience: "Recomandat pentru: livrari in centru si distante scurte/medii.",
-    image: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?q=80&w=1200&auto=format&fit=crop",
+    image: kisbee,
   },
   {
     hash: "masini",
-    title: "Masini electrice si hibride",
+    title: "Masini hibride si electrice",
     Icon: Car,
-    desc: "Confort si consum redus pentru ridesharing si activitate constanta.",
+    desc: "Toyota Corolla si Camry Hybrid, Aygo X, Citroën C3 si ë-C3 electric. Consum mic, confort lung.",
     audience: "Recomandat pentru: soferi Uber, Bolt si utilizare zilnica intensa.",
-    image: "https://images.unsplash.com/photo-1623006772851-a8bf2c47d3a7?q=80&w=1200&auto=format&fit=crop",
+    image: corolla,
   },
 ];
 
@@ -65,7 +53,7 @@ export function RentalCategoriesPreview() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
           {categories.map((c, i) => (
             <motion.div
               key={c.hash}
