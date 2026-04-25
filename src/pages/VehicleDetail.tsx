@@ -156,16 +156,6 @@ const VehicleDetail = () => {
             </div>
           </div>
 
-          <div className="mt-6 rounded-2xl border border-border bg-card p-6">
-            <h2 className="font-display text-lg font-bold">Conditii de inchiriere</h2>
-            <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2">
-              {vehicle.rules.map((r) => (
-                <li key={r} className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" /> {r}
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         {/* Info & CTA */}
