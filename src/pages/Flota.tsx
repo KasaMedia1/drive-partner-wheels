@@ -123,12 +123,12 @@ const Flota = () => {
 
   return (
     <SiteLayout>
-      <Seo title="Flota completa | DrivePartner" description="Filtreaza masini, scutere si biciclete electrice pentru Uber, Bolt si curieri. Disponibilitate live si preturi transparente." path="/flota" />
+      <Seo title="Flota completa | DriveRent" description="Filtreaza masini, scutere si biciclete electrice pentru Uber, Bolt si curieri. Disponibilitate live si preturi transparente." path="/flota" />
 
       <section className="border-b border-border bg-background-soft">
         <div className="container-page py-10 sm:py-14">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary">Flota</p>
-          <h1 className="mt-2 font-display text-3xl font-extrabold sm:text-5xl">Toate vehiculele DrivePartner</h1>
+          <h1 className="mt-2 font-display text-3xl font-extrabold sm:text-5xl">Toate vehiculele DriveRent</h1>
           <p className="mt-3 max-w-2xl text-muted-foreground">Filtreaza dupa nevoie si rezerva in cateva click-uri. Pretul include asigurare, service si asistenta 24/7.</p>
         </div>
       </section>

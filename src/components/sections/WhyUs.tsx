@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Clock, FileCheck2, Headphones, ShieldCheck } from "lucide-react";
 
 const features = [
-  { Icon: Headphones, title: "Asistenta 24/7", desc: "Suntem la telefon zi si noapte, in weekend si sarbatori." },
-  { Icon: ShieldCheck, title: "Asigurare completa", desc: "RCA si CASCO incluse in pret. Zero stres dupa volan." },
-  { Icon: Clock, title: "Masina de schimb in 2h", desc: "Daca apare o problema, primesti vehicul de inlocuire imediat." },
-  { Icon: FileCheck2, title: "Contract flexibil", desc: "Inchirieri de la 7 zile, prelungesti cand vrei, fara taxe ascunse." },
+  { Icon: FileCheck2, title: "Flota variata", desc: "Solutii pentru orice tip de activitate, de la livrari la naveta zilnica." },
+  { Icon: Clock, title: "Contract rapid", desc: "Proces simplificat, semnezi si pleci. Fara birocratie inutila." },
+  { Icon: ShieldCheck, title: "Vehicule verificate", desc: "Intretinute periodic si pregatite pentru utilizare imediata." },
+  { Icon: Headphones, title: "Suport tehnic real", desc: "Asistenta pe toata durata inchirierii, fara call center." },
 ];
 
 export function WhyUs() {
@@ -13,8 +13,9 @@ export function WhyUs() {
     <section className="py-16 sm:py-20 bg-background-soft">
       <div className="container-page">
         <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-wider text-primary">De ce DrivePartner</p>
-          <h2 className="mt-2 font-display text-3xl font-extrabold sm:text-4xl">Garantii reale, nu promisiuni de marketing.</h2>
+          <p className="text-sm font-semibold uppercase tracking-wider text-primary">De ce DriveRent</p>
+          <h2 className="mt-2 font-display text-3xl font-extrabold sm:text-4xl">Solutii simple si eficiente pentru mobilitate urbana.</h2>
+          <p className="mt-3 text-muted-foreground">DriveRent iti ofera mai mult decat un vehicul. Iti ofera o solutie completa pentru deplasare in oras, fara complicatii.</p>
         </div>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f, i) => (

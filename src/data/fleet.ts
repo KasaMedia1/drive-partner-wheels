@@ -1,4 +1,5 @@
 export type VehicleCategory = "masina" | "scuter" | "bicicleta";
+export type ScooterClass = "50cc" | "125cc" | "fara-permis" | "electric";
 export type Audience = "uber-bolt" | "curieri";
 export type Transmission = "manual" | "automat";
 export type FuelType = "benzina" | "diesel" | "hybrid" | "electric";
@@ -10,13 +11,15 @@ export interface Vehicle {
   name: string;
   year: number;
   category: VehicleCategory;
+  scooterClass?: ScooterClass; // for scuter/bicicleta groupings
   audience: Audience[];
   transmission?: Transmission;
   fuel: FuelType;
-  autonomyKm?: number; // electric range or fuel km
+  autonomyKm?: number;
   consumptionLper100?: number;
   seats?: number;
   cargoLiters?: number;
+  topSpeedKmh?: number;
   pricePerDay: number;
   pricePerWeek: number;
   pricePerMonth: number;
@@ -25,12 +28,13 @@ export interface Vehicle {
   highlights: string[];
   included: string[];
   rules: string[];
-  images: string[]; // [primary, alt-angle, ...]
+  images: string[];
 }
 
 const u = (id: string) => `https://images.unsplash.com/${id}?q=80&w=1600&auto=format&fit=crop`;
 
 export const fleet: Vehicle[] = [
+  // ============ MASINI ============
   {
     id: "dacia-logan-2022",
     slug: "dacia-logan-2022",
@@ -51,11 +55,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Cutie automata", "Consum mic", "Spatiu generos"],
     included: ["Asigurare RCA + CASCO", "Service complet", "Asistenta rutiera 24/7", "Inlocuire in 2h"],
     rules: ["Minim 21 ani", "Permis de minim 2 ani", "Garantie returnabila 1500 lei"],
-    images: [
-      u("photo-1549924231-f129b911e442"),
-      u("photo-1502877338535-766e1452684a"),
-      u("photo-1503376780353-7e6692767b70"),
-    ],
+    images: [u("photo-1549924231-f129b911e442"), u("photo-1502877338535-766e1452684a"), u("photo-1503376780353-7e6692767b70")],
   },
   {
     id: "toyota-corolla-hybrid-2023",
@@ -77,11 +77,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Consum 4.1L", "Categorie Comfort/XL", "Cutie automata"],
     included: ["Asigurare full", "Revizii incluse", "Asistenta 24/7", "Inlocuire in 2h"],
     rules: ["Minim 23 ani", "Permis de minim 3 ani", "Garantie 2000 lei"],
-    images: [
-      u("photo-1623006772851-a8bf2c47d3a7"),
-      u("photo-1606664515524-ed2f786a0bd6"),
-      u("photo-1617469767053-d3b523a0b982"),
-    ],
+    images: [u("photo-1623006772851-a8bf2c47d3a7"), u("photo-1606664515524-ed2f786a0bd6"), u("photo-1617469767053-d3b523a0b982")],
   },
   {
     id: "hyundai-i20-2022",
@@ -103,11 +99,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Manevrabil", "Consum redus", "Aer conditionat"],
     included: ["Asigurare completa", "Service inclus", "Asistenta 24/7"],
     rules: ["Minim 21 ani", "Permis de minim 2 ani", "Garantie 1500 lei"],
-    images: [
-      u("photo-1592805144716-feeccccef5ac"),
-      u("photo-1494976388531-d1058494cdd8"),
-      u("photo-1511919884226-fd3cad34687c"),
-    ],
+    images: [u("photo-1592805144716-feeccccef5ac"), u("photo-1494976388531-d1058494cdd8"), u("photo-1511919884226-fd3cad34687c")],
   },
   {
     id: "skoda-octavia-2023",
@@ -129,36 +121,32 @@ export const fleet: Vehicle[] = [
     highlights: ["Categorie XL", "Portbagaj urias", "Confort lung"],
     included: ["Asigurare full", "Revizii incluse", "Asistenta 24/7"],
     rules: ["Minim 23 ani", "Permis de minim 3 ani", "Garantie 2500 lei"],
-    images: [
-      u("photo-1606220588913-b3aacb4d2f46"),
-      u("photo-1552519507-da3b142c6e3d"),
-      u("photo-1503376780353-7e6692767b70"),
-    ],
+    images: [u("photo-1606220588913-b3aacb4d2f46"), u("photo-1552519507-da3b142c6e3d"), u("photo-1503376780353-7e6692767b70")],
   },
+
+  // ============ SCUTERE 125cc ============
   {
     id: "sym-symphony-125",
     slug: "sym-symphony-125",
     name: "SYM Symphony 125",
     year: 2023,
     category: "scuter",
+    scooterClass: "125cc",
     audience: ["curieri"],
     fuel: "benzina",
     autonomyKm: 250,
     consumptionLper100: 2.5,
     cargoLiters: 35,
+    topSpeedKmh: 95,
     pricePerDay: 55,
     pricePerWeek: 280,
     pricePerMonth: 950,
     availability: "disponibil",
-    shortDescription: "Scuter fiabil pentru curieri Glovo si Wolt, consum minim.",
+    shortDescription: "Scuter fiabil 125cc pentru curieri Glovo si Wolt, consum minim.",
     highlights: ["Top case 35L", "Pornire usoara", "Consum 2.5L"],
     included: ["Casca", "Asigurare", "Service inclus", "Inlocuire in 2h"],
     rules: ["Permis AM/A1", "Garantie 800 lei"],
-    images: [
-      u("photo-1568772585407-9361f9bf3a87"),
-      u("photo-1571068316344-75bc76f77890"),
-      u("photo-1558981403-c5f9899a28bc"),
-    ],
+    images: [u("photo-1568772585407-9361f9bf3a87"), u("photo-1571068316344-75bc76f77890"), u("photo-1558981403-c5f9899a28bc")],
   },
   {
     id: "piaggio-liberty-125",
@@ -166,35 +154,156 @@ export const fleet: Vehicle[] = [
     name: "Piaggio Liberty 125",
     year: 2023,
     category: "scuter",
+    scooterClass: "125cc",
     audience: ["curieri"],
     fuel: "benzina",
     autonomyKm: 270,
     consumptionLper100: 2.4,
     cargoLiters: 40,
+    topSpeedKmh: 100,
     pricePerDay: 60,
     pricePerWeek: 320,
     pricePerMonth: 1100,
     availability: "disponibil",
-    shortDescription: "Scuter italian agil cu top case, pentru livrari rapide.",
+    shortDescription: "Scuter italian agil 125cc cu top case, pentru livrari rapide.",
     highlights: ["Roti mari", "Stabilitate", "Top case 40L"],
     included: ["Casca", "Asigurare", "Service inclus"],
     rules: ["Permis AM/A1", "Garantie 1000 lei"],
-    images: [
-      u("photo-1558981852-426c6c22a060"),
-      u("photo-1571068316344-75bc76f77890"),
-      u("photo-1525160354320-d8e92641c563"),
-    ],
+    images: [u("photo-1558981852-426c6c22a060"), u("photo-1571068316344-75bc76f77890"), u("photo-1525160354320-d8e92641c563")],
   },
+  {
+    id: "honda-pcx-125",
+    slug: "honda-pcx-125",
+    name: "Honda PCX 125",
+    year: 2024,
+    category: "scuter",
+    scooterClass: "125cc",
+    audience: ["curieri"],
+    fuel: "benzina",
+    autonomyKm: 350,
+    consumptionLper100: 2.1,
+    cargoLiters: 45,
+    topSpeedKmh: 110,
+    pricePerDay: 65,
+    pricePerWeek: 350,
+    pricePerMonth: 1200,
+    availability: "disponibil",
+    shortDescription: "Premium 125cc, consum extrem de mic si confort maxim pentru ture lungi.",
+    highlights: ["Smart Key", "Consum 2.1L", "Top case 45L"],
+    included: ["Casca", "Asigurare", "Service complet"],
+    rules: ["Permis AM/A1", "Garantie 1200 lei"],
+    images: [u("photo-1609630875171-b1321377ee65"), u("photo-1568772585407-9361f9bf3a87"), u("photo-1558981852-426c6c22a060")],
+  },
+
+  // ============ SCUTERE 50cc ============
+  {
+    id: "sym-orbit-50",
+    slug: "sym-orbit-50",
+    name: "SYM Orbit 50",
+    year: 2023,
+    category: "scuter",
+    scooterClass: "50cc",
+    audience: ["curieri"],
+    fuel: "benzina",
+    autonomyKm: 200,
+    consumptionLper100: 2.2,
+    cargoLiters: 30,
+    topSpeedKmh: 45,
+    pricePerDay: 45,
+    pricePerWeek: 220,
+    pricePerMonth: 780,
+    availability: "disponibil",
+    shortDescription: "Scuter usor 50cc, ideal pentru livrari urbane si soferi incepatori.",
+    highlights: ["Usor de manevrat", "Consum redus", "Top case 30L"],
+    included: ["Casca", "Asigurare", "Service inclus"],
+    rules: ["Permis AM", "Garantie 600 lei"],
+    images: [u("photo-1571068316344-75bc76f77890"), u("photo-1558981403-c5f9899a28bc"), u("photo-1525160354320-d8e92641c563")],
+  },
+  {
+    id: "piaggio-zip-50",
+    slug: "piaggio-zip-50",
+    name: "Piaggio Zip 50",
+    year: 2024,
+    category: "scuter",
+    scooterClass: "50cc",
+    audience: ["curieri"],
+    fuel: "benzina",
+    autonomyKm: 180,
+    consumptionLper100: 2.4,
+    cargoLiters: 28,
+    topSpeedKmh: 45,
+    pricePerDay: 48,
+    pricePerWeek: 240,
+    pricePerMonth: 820,
+    availability: "disponibil",
+    shortDescription: "Clasic italian 50cc, agil in trafic aglomerat.",
+    highlights: ["Compact", "Pornire usoara", "Fiabil"],
+    included: ["Casca", "Asigurare", "Service inclus"],
+    rules: ["Permis AM", "Garantie 700 lei"],
+    images: [u("photo-1558981852-426c6c22a060"), u("photo-1568772585407-9361f9bf3a87"), u("photo-1571068316344-75bc76f77890")],
+  },
+
+  // ============ SCUTERE FARA PERMIS (50cc moped legal) ============
+  {
+    id: "kymco-agility-50-fp",
+    slug: "kymco-agility-50-fp",
+    name: "Kymco Agility 50",
+    year: 2024,
+    category: "scuter",
+    scooterClass: "fara-permis",
+    audience: ["curieri"],
+    fuel: "benzina",
+    autonomyKm: 170,
+    consumptionLper100: 2.3,
+    cargoLiters: 28,
+    topSpeedKmh: 45,
+    pricePerDay: 45,
+    pricePerWeek: 230,
+    pricePerMonth: 800,
+    availability: "disponibil",
+    shortDescription: "Moped 50cc fara cerinta permis A1, pentru livrari rapide la inceput de drum.",
+    highlights: ["Fara permis A1", "Consum minim", "Usor de pornit"],
+    included: ["Casca", "Asigurare", "Service inclus"],
+    rules: ["Minim 16 ani", "Categoria AM acceptata", "Garantie 600 lei"],
+    images: [u("photo-1568772585407-9361f9bf3a87"), u("photo-1571068316344-75bc76f77890"), u("photo-1558981403-c5f9899a28bc")],
+  },
+  {
+    id: "peugeot-kisbee-50-fp",
+    slug: "peugeot-kisbee-50-fp",
+    name: "Peugeot Kisbee 50",
+    year: 2023,
+    category: "scuter",
+    scooterClass: "fara-permis",
+    audience: ["curieri"],
+    fuel: "benzina",
+    autonomyKm: 190,
+    consumptionLper100: 2.2,
+    cargoLiters: 25,
+    topSpeedKmh: 45,
+    pricePerDay: 42,
+    pricePerWeek: 210,
+    pricePerMonth: 750,
+    availability: "disponibil",
+    shortDescription: "Scuter francez 50cc, accesibil si fiabil pentru navetisti.",
+    highlights: ["Frana CBS", "Compartiment sub sa", "Eficient"],
+    included: ["Casca", "Asigurare", "Service inclus"],
+    rules: ["Minim 16 ani", "Categoria AM acceptata", "Garantie 500 lei"],
+    images: [u("photo-1525160354320-d8e92641c563"), u("photo-1558981852-426c6c22a060"), u("photo-1568772585407-9361f9bf3a87")],
+  },
+
+  // ============ SCUTERE ELECTRICE ============
   {
     id: "niu-n1s-electric",
     slug: "niu-n1s-electric",
     name: "NIU N1S Electric",
     year: 2024,
     category: "scuter",
+    scooterClass: "electric",
     audience: ["curieri"],
     fuel: "electric",
     autonomyKm: 80,
     cargoLiters: 35,
+    topSpeedKmh: 45,
     pricePerDay: 50,
     pricePerWeek: 250,
     pricePerMonth: 850,
@@ -203,12 +312,32 @@ export const fleet: Vehicle[] = [
     highlights: ["Zero emisii", "Cost minim/km", "Baterie detasabila"],
     included: ["Casca", "2 baterii", "Asigurare", "Inlocuire in 2h"],
     rules: ["Permis AM/A1", "Garantie 1200 lei"],
-    images: [
-      u("photo-1609630875171-b1321377ee65"),
-      u("photo-1591637333472-a4f4b0a4a3a7"),
-      u("photo-1558981806-ec527fa84c39"),
-    ],
+    images: [u("photo-1609630875171-b1321377ee65"), u("photo-1591637333472-a4f4b0a4a3a7"), u("photo-1558981806-ec527fa84c39")],
   },
+  {
+    id: "super-soco-cux",
+    slug: "super-soco-cux",
+    name: "Super Soco CUx",
+    year: 2024,
+    category: "scuter",
+    scooterClass: "electric",
+    audience: ["curieri"],
+    fuel: "electric",
+    autonomyKm: 75,
+    cargoLiters: 30,
+    topSpeedKmh: 45,
+    pricePerDay: 48,
+    pricePerWeek: 240,
+    pricePerMonth: 820,
+    availability: "disponibil",
+    shortDescription: "E-scuter compact, design modern si app Bluetooth.",
+    highlights: ["Conectivitate app", "Baterie portabila", "Acceleratie rapida"],
+    included: ["Casca", "Baterie spare", "Asigurare"],
+    rules: ["Permis AM/A1", "Garantie 1100 lei"],
+    images: [u("photo-1591637333472-a4f4b0a4a3a7"), u("photo-1558981806-ec527fa84c39"), u("photo-1609630875171-b1321377ee65")],
+  },
+
+  // ============ BICICLETE ELECTRICE ============
   {
     id: "tenways-cargo",
     slug: "tenways-cargo",
@@ -219,6 +348,7 @@ export const fleet: Vehicle[] = [
     fuel: "electric",
     autonomyKm: 70,
     cargoLiters: 60,
+    topSpeedKmh: 25,
     pricePerDay: 40,
     pricePerWeek: 180,
     pricePerMonth: 600,
@@ -227,11 +357,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Cargo 60L", "Asistare puternica", "Fara permis"],
     included: ["Casca", "Lacat", "Geanta termica", "Service inclus"],
     rules: ["Minim 18 ani", "Garantie 600 lei"],
-    images: [
-      u("photo-1571068316344-75bc76f77890"),
-      u("photo-1485965120184-e220f721d03e"),
-      u("photo-1532298229144-0ec0c57515c7"),
-    ],
+    images: [u("photo-1571068316344-75bc76f77890"), u("photo-1485965120184-e220f721d03e"), u("photo-1532298229144-0ec0c57515c7")],
   },
   {
     id: "himiway-cruiser",
@@ -243,6 +369,7 @@ export const fleet: Vehicle[] = [
     fuel: "electric",
     autonomyKm: 90,
     cargoLiters: 35,
+    topSpeedKmh: 25,
     pricePerDay: 45,
     pricePerWeek: 200,
     pricePerMonth: 700,
@@ -251,11 +378,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Autonomie 90km", "Suspensie", "Anvelope groase"],
     included: ["Casca", "Lacat", "Geanta termica"],
     rules: ["Minim 18 ani", "Garantie 700 lei"],
-    images: [
-      u("photo-1485965120184-e220f721d03e"),
-      u("photo-1532298229144-0ec0c57515c7"),
-      u("photo-1502744688674-c619d1586c9e"),
-    ],
+    images: [u("photo-1485965120184-e220f721d03e"), u("photo-1532298229144-0ec0c57515c7"), u("photo-1502744688674-c619d1586c9e")],
   },
   {
     id: "fiido-m1-pro",
@@ -267,6 +390,7 @@ export const fleet: Vehicle[] = [
     fuel: "electric",
     autonomyKm: 60,
     cargoLiters: 25,
+    topSpeedKmh: 25,
     pricePerDay: 35,
     pricePerWeek: 160,
     pricePerMonth: 550,
@@ -275,11 +399,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Pliabila", "Usoara", "Consum minim"],
     included: ["Casca", "Lacat", "Service inclus"],
     rules: ["Minim 18 ani", "Garantie 500 lei"],
-    images: [
-      u("photo-1532298229144-0ec0c57515c7"),
-      u("photo-1502744688674-c619d1586c9e"),
-      u("photo-1485965120184-e220f721d03e"),
-    ],
+    images: [u("photo-1532298229144-0ec0c57515c7"), u("photo-1502744688674-c619d1586c9e"), u("photo-1485965120184-e220f721d03e")],
   },
 ];
 
@@ -296,4 +416,11 @@ export const categoryLabels: Record<VehicleCategory, string> = {
 export const audienceLabels: Record<Audience, string> = {
   "uber-bolt": "Uber / Bolt",
   curieri: "Curierat",
+};
+
+export const scooterClassLabels: Record<ScooterClass, string> = {
+  "50cc": "Scutere 50cc",
+  "125cc": "Scutere 125cc",
+  "fara-permis": "Scutere fara permis",
+  electric: "Scutere electrice",
 };

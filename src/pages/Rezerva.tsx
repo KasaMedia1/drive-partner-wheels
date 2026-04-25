@@ -62,7 +62,7 @@ const Rezerva = () => {
     const periodLabel = periods.find((p) => p.id === periodId)?.label;
     const dateStr = startDate ? format(startDate, "dd MMMM yyyy", { locale: ro }) : "data flexibila";
     const lines = [
-      `Cerere rezervare DrivePartner`,
+      `Cerere rezervare DriveRent`,
       `Vehicul: ${vehicle.name} (${vehicle.year})`,
       `Perioada: ${periodLabel}`,
       `Data start: ${dateStr}`,
@@ -89,7 +89,7 @@ const Rezerva = () => {
 
   return (
     <SiteLayout>
-      <Seo title={`Rezerva ${vehicle.name} | DrivePartner`} description={vehicle.shortDescription} path={`/rezerva/${vehicle.slug}`} image={vehicle.images[0]} jsonLd={productJsonLd} />
+      <Seo title={`Rezerva ${vehicle.name} | DriveRent`} description={vehicle.shortDescription} path={`/rezerva/${vehicle.slug}`} image={vehicle.images[0]} jsonLd={productJsonLd} />
 
       <div className="container-page pt-8">
         <Link to="/flota" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary">

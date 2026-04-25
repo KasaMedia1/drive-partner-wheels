@@ -8,11 +8,11 @@ export function Footer() {
       <div className="container-page grid gap-10 py-14 md:grid-cols-4">
         <div>
           <Link to="/" className="flex items-center gap-2 font-display text-xl font-extrabold">
-            <span className="grid h-8 w-8 place-items-center rounded-lg gradient-primary text-primary-foreground">DP</span>
-            <span>Drive<span className="gradient-text">Partner</span></span>
+            <span className="grid h-8 w-8 place-items-center rounded-lg gradient-primary text-primary-foreground">DR</span>
+            <span>Drive<span className="gradient-text">Rent</span></span>
           </Link>
           <p className="mt-3 text-sm text-muted-foreground max-w-xs">
-            Inchirieri masini, scutere si biciclete electrice pentru soferi Uber, Bolt si curieri Glovo, Wolt, Bolt Food in {SITE.city}.
+            Mobilitate urbana pentru curieri, soferi de ridesharing si deplasari zilnice in {SITE.city}.
           </p>
           <div className="mt-4 flex gap-2">
             <a href={SITE.social.facebook} aria-label="Facebook" className="grid h-9 w-9 place-items-center rounded-md border border-border hover:border-primary hover:text-primary">
@@ -25,11 +25,22 @@ export function Footer() {
         </div>
 
         <div>
+          <h4 className="font-display text-sm font-bold uppercase tracking-wider text-muted-foreground">Inchiriere</h4>
+          <ul className="mt-4 space-y-2 text-sm">
+            <li><Link to="/inchiriere#scutere-125" className="hover:text-primary">Scutere 125cc</Link></li>
+            <li><Link to="/inchiriere#scutere-50" className="hover:text-primary">Scutere 50cc</Link></li>
+            <li><Link to="/inchiriere#fara-permis" className="hover:text-primary">Scutere fara permis</Link></li>
+            <li><Link to="/inchiriere#electrice" className="hover:text-primary">Scutere electrice</Link></li>
+            <li><Link to="/inchiriere#biciclete" className="hover:text-primary">Biciclete electrice</Link></li>
+            <li><Link to="/inchiriere#masini" className="hover:text-primary">Masini</Link></li>
+          </ul>
+        </div>
+
+        <div>
           <h4 className="font-display text-sm font-bold uppercase tracking-wider text-muted-foreground">Linkuri</h4>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><Link to="/flota" className="hover:text-primary">Flota</Link></li>
-            <li><Link to="/uber-bolt" className="hover:text-primary">Pentru Uber / Bolt</Link></li>
-            <li><Link to="/curieri" className="hover:text-primary">Pentru curieri</Link></li>
+            <li><Link to="/calculator-uber" className="hover:text-primary">Calculator Uber/Bolt</Link></li>
+            <li><Link to="/calculator-curieri" className="hover:text-primary">Calculator curieri</Link></li>
             <li><Link to="/despre" className="hover:text-primary">Despre noi</Link></li>
             <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>
           </ul>
@@ -42,22 +53,14 @@ export function Footer() {
             <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-0.5 text-primary" /><span>{SITE.email}</span></li>
             <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 text-primary" /><span>{SITE.address}</span></li>
             <li className="text-muted-foreground">{SITE.program}</li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="font-display text-sm font-bold uppercase tracking-wider text-muted-foreground">Garantii</h4>
-          <ul className="mt-4 space-y-3 text-sm">
-            <li className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-primary" />Asigurare RCA + CASCO</li>
-            <li className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-primary" />Verificare RAR la zi</li>
-            <li className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-primary" />Parteneri Uber, Bolt, Glovo</li>
+            <li className="flex items-center gap-2 pt-2"><ShieldCheck className="h-4 w-4 text-primary" />Vehicule verificate periodic</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-border">
         <div className="container-page flex flex-col gap-2 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} {SITE.name}. Toate drepturile rezervate.</p>
-          <p>Realizat cu grija pentru soferi si curieri.</p>
+          <p>Pentru activare ca livrator, parteneri DrivePartner.</p>
         </div>
       </div>
     </footer>

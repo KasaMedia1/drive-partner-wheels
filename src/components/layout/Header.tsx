@@ -6,9 +6,10 @@ import { SITE, telLink } from "@/config/site";
 import { cn } from "@/lib/utils";
 
 const nav = [
+  { to: "/inchiriere", label: "Inchiriere" },
   { to: "/flota", label: "Flota" },
-  { to: "/uber-bolt", label: "Uber / Bolt" },
-  { to: "/curieri", label: "Curieri" },
+  { to: "/calculator-uber", label: "Calculator Uber/Bolt" },
+  { to: "/calculator-curieri", label: "Calculator curieri" },
   { to: "/despre", label: "Despre" },
   { to: "/contact", label: "Contact" },
 ];
@@ -28,10 +29,9 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40">
-      {/* Announcement bar */}
       <div className="gradient-primary text-primary-foreground text-xs sm:text-sm">
         <div className="container-page flex h-9 items-center justify-between gap-3">
-          <p className="truncate font-medium">Rezervi azi, ridici maine · Asistenta 24/7</p>
+          <p className="truncate font-medium">Mobilitate urbana rapida · Vehicule pregatite imediat</p>
           <a href={telLink()} className="hidden sm:inline-flex items-center gap-1.5 hover:underline">
             <Phone className="h-3.5 w-3.5" />
             <span className="tabular">{SITE.phoneDisplay}</span>
@@ -45,15 +45,15 @@ export function Header() {
           scrolled && "shadow-card",
         )}
       >
-        <div className="container-page flex h-16 items-center justify-between">
+        <div className="container-page flex h-16 items-center justify-between gap-4">
           <Link to="/" className="flex items-center gap-2 font-display text-xl font-extrabold tracking-tight">
             <span className="grid h-8 w-8 place-items-center rounded-lg gradient-primary text-primary-foreground">
-              DP
+              DR
             </span>
-            <span>Drive<span className="gradient-text">Partner</span></span>
+            <span>Drive<span className="gradient-text">Rent</span></span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden xl:flex items-center gap-1">
             {nav.map((item) => (
               <NavLink
                 key={item.to}
@@ -79,11 +79,11 @@ export function Header() {
               {SITE.phoneDisplay}
             </a>
             <Button asChild size="sm" className="hidden sm:inline-flex">
-              <Link to="/flota">Rezerva</Link>
+              <Link to="/inchiriere">Inchiriaza</Link>
             </Button>
             <button
               aria-label="Meniu"
-              className="lg:hidden grid h-10 w-10 place-items-center rounded-md border border-border"
+              className="xl:hidden grid h-10 w-10 place-items-center rounded-md border border-border"
               onClick={() => setOpen((v) => !v)}
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -92,7 +92,7 @@ export function Header() {
         </div>
 
         {open && (
-          <div className="lg:hidden border-t border-border bg-background animate-fade-in">
+          <div className="xl:hidden border-t border-border bg-background animate-fade-in">
             <nav className="container-page flex flex-col py-3">
               {nav.map((item) => (
                 <NavLink

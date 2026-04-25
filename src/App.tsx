@@ -1,12 +1,13 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
+import Inchiriere from "./pages/Inchiriere.tsx";
 import Flota from "./pages/Flota.tsx";
-import UberBolt from "./pages/UberBolt.tsx";
-import Curieri from "./pages/Curieri.tsx";
+import CalculatorUber from "./pages/CalculatorUber.tsx";
+import CalculatorCurieri from "./pages/CalculatorCurieri.tsx";
 import Despre from "./pages/Despre.tsx";
 import Contact from "./pages/Contact.tsx";
 import Rezerva from "./pages/Rezerva.tsx";
@@ -22,9 +23,13 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/inchiriere" element={<Inchiriere />} />
           <Route path="/flota" element={<Flota />} />
-          <Route path="/uber-bolt" element={<UberBolt />} />
-          <Route path="/curieri" element={<Curieri />} />
+          <Route path="/calculator-uber" element={<CalculatorUber />} />
+          <Route path="/calculator-curieri" element={<CalculatorCurieri />} />
+          {/* Legacy redirects */}
+          <Route path="/uber-bolt" element={<Navigate to="/calculator-uber" replace />} />
+          <Route path="/curieri" element={<Navigate to="/calculator-curieri" replace />} />
           <Route path="/despre" element={<Despre />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/rezerva/:id" element={<Rezerva />} />

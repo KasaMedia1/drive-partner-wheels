@@ -1,11 +1,11 @@
-// DrivePartner site-wide constants. Phone is a placeholder, mark before launch.
+// DriveRent site-wide constants. Phone is a placeholder, mark before launch.
 export const SITE = {
-  name: "DrivePartner",
+  name: "DriveRent",
   city: "Bucuresti",
   phoneDisplay: "+40 7xx xxx xxx",
   phoneE164: "+40700000000", // placeholder
   whatsappNumber: "40700000000", // placeholder, no plus
-  email: "contact@drivepartner.ro",
+  email: "contact@driverent.ro",
   address: "Str. Exemplu 12, Bucuresti",
   program: "Luni-Vineri 09:00-19:00 · Sambata 10:00-15:00",
   social: {
@@ -16,7 +16,6 @@ export const SITE = {
 };
 
 export function whatsappLink(message: string): string {
-  // Cap message length to keep URL safe.
   const safe = message.slice(0, 1500);
   return `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(safe)}`;
 }
