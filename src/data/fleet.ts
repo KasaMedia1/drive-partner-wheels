@@ -104,7 +104,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Hybrid 138 CP", "Cutie e-CVT", "Consum sub 5L"],
     included: COMMON_INCLUDED_CAR,
     rules: ["Minim 23 ani", "Permis de minim 3 ani", "Garantie 2000 lei"],
-    images: [corolla, corolla2],
+    images: [corolla1, corolla2, corolla3],
   },
   {
     id: "toyota-camry-hybrid",
@@ -126,7 +126,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Hybrid 208 CP", "Categorie XL/Comfort", "Cutie e-CVT"],
     included: COMMON_INCLUDED_CAR,
     rules: ["Minim 25 ani", "Permis de minim 5 ani", "Garantie 3000 lei"],
-    images: [camry],
+    images: [camry1, camry2],
   },
   {
     id: "toyota-aygo-x",
@@ -148,7 +148,7 @@ export const fleet: Vehicle[] = [
     highlights: ["1.0L benzina", "Manevrabilitate maxima", "Consum redus"],
     included: COMMON_INCLUDED_CAR,
     rules: COMMON_RULES_CAR,
-    images: [aygoX, aygoX2],
+    images: [aygo1, aygo2, aygo3],
   },
   {
     id: "citroen-c3",
@@ -170,7 +170,7 @@ export const fleet: Vehicle[] = [
     highlights: ["1.2L Turbo 100 CP", "Suspensie confort", "5 locuri"],
     included: COMMON_INCLUDED_CAR,
     rules: COMMON_RULES_CAR,
-    images: [c3],
+    images: [c31, c32],
   },
   {
     id: "citroen-e-c3",
@@ -191,7 +191,7 @@ export const fleet: Vehicle[] = [
     highlights: ["100% electric", "Autonomie 320 km", "Zero combustibil"],
     included: COMMON_INCLUDED_CAR,
     rules: COMMON_RULES_CAR,
-    images: [ec3],
+    images: [ec31],
   },
 
   // ============ SCUTERE FARA PERMIS (50cc, limitat 25 km/h) ============
@@ -216,7 +216,7 @@ export const fleet: Vehicle[] = [
     highlights: ["49.9cc, 4T EFI", "Frana disc 170mm fata", "Pornire electrica + kick"],
     included: COMMON_INCLUDED_FP,
     rules: ["Minim 16 ani", "Categoria AM acceptata", "Garantie 500 lei"],
-    images: [kisbee, kisbee2],
+    images: [kisbee1, kisbee2, kisbee3],
   },
   {
     id: "peugeot-tweet-50",
@@ -239,7 +239,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Roti 16\"", "4T monocilindru", "Transmisie CVT"],
     included: COMMON_INCLUDED_FP,
     rules: ["Minim 16 ani", "Categoria AM acceptata", "Garantie 500 lei"],
-    images: [tweet],
+    images: [tweet1, tweet2],
   },
   {
     id: "sym-fiddle-ii-50",
@@ -262,7 +262,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Design retro", "~3 CP, CVT", "Consum redus"],
     included: COMMON_INCLUDED_FP,
     rules: ["Minim 16 ani", "Categoria AM acceptata", "Garantie 500 lei"],
-    images: [fiddle],
+    images: [fiddle1, fiddle2, fiddle3],
   },
   {
     id: "kymco-agility-50",
@@ -285,7 +285,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Foarte fiabil", "~3 CP, CVT", "Pret accesibil"],
     included: COMMON_INCLUDED_FP,
     rules: ["Minim 16 ani", "Categoria AM acceptata", "Garantie 500 lei"],
-    images: [agility50],
+    images: [agilityFp1, agilityFp2],
   },
   {
     id: "kymco-like-50",
@@ -308,7 +308,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Design retro premium", "Cromaje", "4T racire aer"],
     included: COMMON_INCLUDED_FP,
     rules: ["Minim 16 ani", "Categoria AM acceptata", "Garantie 600 lei"],
-    images: [like50],
+    images: [like1, like2],
   },
   {
     id: "znen-retro-50",
@@ -331,7 +331,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Stil Vespa", "Finisaje cromate", "Aer racit"],
     included: COMMON_INCLUDED_FP,
     rules: ["Minim 16 ani", "Categoria AM acceptata", "Garantie 500 lei"],
-    images: [retro],
+    images: [retro1, retro2, retro3],
   },
 
   // ============ SCUTERE 50CC ============
@@ -356,7 +356,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Design modern", "Costuri reduse", "Manevrabilitate excelenta"],
     included: COMMON_INCLUDED_SCOOTER,
     rules: ["Permis AM/A1", "Garantie 600 lei"],
-    images: [breezy],
+    images: [breezy1, breezy2],
   },
   {
     id: "kymco-agility-50-2024",
@@ -379,7 +379,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Platforma cargo", "Brand global", "Roti mai mari"],
     included: COMMON_INCLUDED_SCOOTER,
     rules: ["Permis AM/A1", "Garantie 600 lei"],
-    images: [agility50_2024],
+    images: [agility50_1, agility50_2],
   },
   {
     id: "sym-symphony-50",
@@ -402,7 +402,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Roti mari", "Confort ridicat", "Utilizare intensa"],
     included: COMMON_INCLUDED_SCOOTER,
     rules: ["Permis AM/A1", "Garantie 700 lei"],
-    images: [symphony50],
+    images: [symphony50_1, symphony50_2],
   },
   {
     id: "sym-x-pro-50",
@@ -425,7 +425,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Suport delivery dual", "Robust", "Spatii depozitare"],
     included: COMMON_INCLUDED_SCOOTER,
     rules: ["Permis AM/A1", "Garantie 700 lei"],
-    images: [xpro50],
+    images: [xpro1, xpro2],
   },
 
   // ============ SCUTERE 125CC ============
@@ -450,7 +450,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Roti mari", "Confort sporit", "Consum redus"],
     included: COMMON_INCLUDED_SCOOTER,
     rules: ["Permis A1/B", "Garantie 1000 lei"],
-    images: [symphony125],
+    images: [symphony125_1, symphony125_2],
   },
   {
     id: "sym-symphony-rs-125",
@@ -473,7 +473,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Design sportiv", "Manevrabil", "125cc CVT"],
     included: COMMON_INCLUDED_SCOOTER,
     rules: ["Permis A1/B", "Garantie 1000 lei"],
-    images: [symphonyRs125],
+    images: [symphonyRs1, symphonyRs2],
   },
   {
     id: "daytona-trevis-125",
@@ -496,7 +496,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Pana la 120 km/h", "Consum 2.2L", "Stabil la viteza"],
     included: COMMON_INCLUDED_SCOOTER,
     rules: ["Permis A1/B", "Garantie 1000 lei"],
-    images: [trevis125, trevis2],
+    images: [trevis1, trevis2, trevis3],
   },
   {
     id: "sym-jet-x-pro-125",
@@ -519,7 +519,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Dashboard digital", "Design sport", "Injectie EFI"],
     included: COMMON_INCLUDED_SCOOTER,
     rules: ["Permis A1/B", "Garantie 1000 lei"],
-    images: [jetX125, jetX2],
+    images: [jetx1, jetx2],
   },
   {
     id: "honda-pcx-125",
@@ -542,7 +542,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Sistem Start-Stop", "Consum 2.1L", "Confort premium"],
     included: COMMON_INCLUDED_SCOOTER,
     rules: ["Permis A1/B", "Garantie 1500 lei"],
-    images: [pcx125, pcx2],
+    images: [pcx1, pcx2],
   },
 ];
 
