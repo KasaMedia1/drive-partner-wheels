@@ -1,81 +1,60 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Bike, Car, Phone } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/hero-fleet.jpg";
+import heroImg from "@/assets/hero-courier.png";
 import { telLink, SITE } from "@/config/site";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 gradient-soft" />
-      <div className="absolute -right-32 top-10 -z-10 h-[600px] w-[600px] rounded-full glow-orange animate-pulse-glow" />
+      {/* Background image - full bleed on desktop */}
+      <div className="absolute inset-0 -z-10">
+        <img
+          src={heroImg}
+          alt="Curier pe scuter livrand in Bucuresti"
+          className="h-full w-full object-cover object-right"
+          loading="eager"
+        />
+        {/* Left-fade overlay so text stays readable, rider on right stays clear */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent md:via-background/70 lg:via-background/55 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent md:hidden" />
+      </div>
 
-      <div className="container-page grid items-center gap-12 py-12 md:py-20 lg:grid-cols-2 lg:py-28">
+      <div className="container-page py-16 md:py-24 lg:py-32">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
+          className="max-w-xl lg:max-w-[52%]"
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-3 py-1 text-xs font-semibold backdrop-blur">
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-3 py-1 text-xs font-semibold backdrop-blur">
             <span className="h-2 w-2 rounded-full bg-success" />
             Disponibil acum in {SITE.city}
           </span>
           <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-            Masina ta de lucru,{" "}
-            <span className="gradient-text">gata maine.</span>
+            Mobilitate urbana{" "}
+            <span className="gradient-text">pentru curieri, ridesharing si naveta.</span>
           </h1>
-          <p className="mt-5 max-w-lg text-base text-muted-foreground sm:text-lg">
-            Inchirieri masini, scutere si biciclete electrice pentru soferi Uber, Bolt si curieri Glovo, Wolt, Bolt Food. Asigurare completa, asistenta 24/7 si masina de schimb in 2h.
+          <p className="mt-5 max-w-lg text-base text-foreground/80 sm:text-lg">
+            DriveRent ofera solutii moderne de inchiriere pentru cei care au nevoie de mobilitate rapida si eficienta in oras. Scutere, biciclete electrice si masini pregatite pentru utilizare imediata.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg" className="shadow-elevate">
-              <Link to="/uber-bolt">
-                <Car className="h-4 w-4" />
-                Vreau pentru Uber / Bolt
+              <Link to="/inchiriere">
+                Vezi categoriile <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link to="/curieri">
-                <Bike className="h-4 w-4" />
-                Vreau pentru curierat
-              </Link>
+            <Button asChild size="lg" variant="outline" className="bg-background/70 backdrop-blur">
+              <Link to="/contact">Solicita oferta</Link>
             </Button>
           </div>
-          <div className="mt-8 flex items-center gap-6 text-sm text-muted-foreground">
+          <div className="mt-8 flex items-center gap-6 text-sm text-foreground/70">
             <a href={telLink()} className="flex items-center gap-2 font-semibold text-foreground hover:text-primary">
               <Phone className="h-4 w-4" /> {SITE.phoneDisplay}
             </a>
             <span className="hidden sm:inline">·</span>
             <span>Raspundem in maxim 1 ora</span>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="relative"
-        >
-          <div className="relative overflow-hidden rounded-3xl border border-border shadow-elevate">
-            <img
-              src={heroImg}
-              alt="Masina, scuter si bicicleta electrica DrivePartner"
-              width={1600}
-              height={1280}
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary-glow/10" />
-          </div>
-
-          <div className="absolute -bottom-6 -left-4 sm:-left-8 hidden sm:block rounded-2xl border border-border bg-card p-4 shadow-card">
-            <p className="text-[11px] uppercase tracking-wider text-muted-foreground">de la</p>
-            <p className="font-display text-2xl font-extrabold tabular">160 lei<span className="text-sm font-medium text-muted-foreground">/sapt</span></p>
-            <p className="text-xs text-muted-foreground">e-bike pentru curieri</p>
-          </div>
-          <div className="absolute -top-4 -right-4 hidden md:flex items-center gap-2 rounded-full bg-card border border-border px-4 py-2 shadow-card">
-            <ArrowRight className="h-4 w-4 text-primary" />
-            <span className="text-sm font-semibold">Ridici in 24h</span>
           </div>
         </motion.div>
       </div>
