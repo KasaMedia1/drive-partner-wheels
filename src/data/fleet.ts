@@ -3,6 +3,8 @@ import corolla2 from "@/assets/fleet/corolla-2.jpg";
 import corolla3 from "@/assets/fleet/corolla-3.jpg";
 import camry1 from "@/assets/fleet/camry-1.jpg";
 import camry2 from "@/assets/fleet/camry-2.jpg";
+import camry3 from "@/assets/fleet/camry-3.jpg";
+import camry4 from "@/assets/fleet/camry-4.jpg";
 import aygo1 from "@/assets/fleet/aygo-1.jpg";
 import aygo2 from "@/assets/fleet/aygo-2.jpg";
 import aygo3 from "@/assets/fleet/aygo-3.jpg";
@@ -126,7 +128,7 @@ export const fleet: Vehicle[] = [
     highlights: ["Hybrid 208 CP", "Categorie XL/Comfort", "Cutie e-CVT"],
     included: COMMON_INCLUDED_CAR,
     rules: ["Minim 25 ani", "Permis de minim 5 ani", "Garantie 3000 lei"],
-    images: [camry1, camry2],
+    images: [camry1, camry2, camry3, camry4],
   },
   {
     id: "toyota-aygo-x",
