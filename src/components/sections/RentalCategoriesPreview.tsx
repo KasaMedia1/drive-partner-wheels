@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Bike, Car, Gauge, KeyRound } from "lucide-react";
+import { ArrowUpRight, Bike, Car, Gauge, KeyRound, Zap } from "lucide-react";
 import pcx from "@/assets/fleet/pcx125.jpg";
 import breezy from "@/assets/fleet/breezy.jpg";
 import kisbee from "@/assets/fleet/kisbee.jpg";
 import corolla from "@/assets/fleet/corolla.jpg";
+import duotts from "@/assets/fleet/duotts-f20-1.jpg";
 
 const categories = [
   {
@@ -38,6 +39,14 @@ const categories = [
     desc: "Toyota Corolla si Camry Hybrid, Aygo X, Citroën C3 si ë-C3 electric. Consum mic, confort lung.",
     audience: "Recomandat pentru: soferi Uber, Bolt si utilizare zilnica intensa.",
     image: corolla,
+  },
+  {
+    hash: "biciclete-electrice",
+    title: "Biciclete electrice",
+    Icon: Zap,
+    desc: "DUOTTS F20 cu motor 1000W, baterie 52V 27Ah si autonomie pana la 140 km. Suspensie completa.",
+    audience: "Recomandat pentru: curieri fara permis si livratori cu costuri zero de combustibil.",
+    image: duotts,
   },
 ];
 

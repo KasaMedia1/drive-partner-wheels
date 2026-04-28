@@ -45,6 +45,12 @@ import jetx1 from "@/assets/fleet/jetx-1.jpg";
 import jetx2 from "@/assets/fleet/jetx-2.jpg";
 import pcx1 from "@/assets/fleet/pcx-1.jpg";
 import pcx2 from "@/assets/fleet/pcx-2.jpg";
+import duotts1 from "@/assets/fleet/duotts-f20-1.jpg";
+import duotts2 from "@/assets/fleet/duotts-f20-2.jpg";
+import duotts3 from "@/assets/fleet/duotts-f20-3.jpg";
+import duotts4 from "@/assets/fleet/duotts-f20-4.jpg";
+import duotts5 from "@/assets/fleet/duotts-f20-5.jpg";
+import duotts6 from "@/assets/fleet/duotts-f20-6.jpg";
 
 export type VehicleCategory = "masina" | "scuter" | "bicicleta";
 export type ScooterClass = "50cc" | "125cc" | "fara-permis" | "electric";
@@ -545,6 +551,28 @@ export const fleet: Vehicle[] = [
     included: COMMON_INCLUDED_SCOOTER,
     rules: ["Permis A1/B", "Garantie 1500 lei"],
     images: [pcx1, pcx2],
+  },
+
+  // ============ BICICLETE ELECTRICE ============
+  {
+    id: "duotts-f20",
+    slug: "duotts-f20",
+    name: "DUOTTS F20",
+    year: 2024,
+    category: "bicicleta",
+    audience: ["curieri"],
+    fuel: "electric",
+    autonomyKm: 140,
+    topSpeedKmh: 25,
+    pricePerDay: 50,
+    pricePerWeek: 250,
+    pricePerMonth: 900,
+    availability: "disponibil",
+    shortDescription: "Bicicleta electrica retro cu motor 1000W, baterie 52V 27Ah si suspensie completa. Autonomie 130-140 km.",
+    highlights: ["Motor 1000W brushless", "Baterie 52V 27Ah", "Autonomie 130-140 km", "Cuplu 70 Nm", "Suspensie completa"],
+    included: ["Incarcator", "Asigurare", "Service inclus"],
+    rules: ["Minim 16 ani", "Sarcina maxima 150 kg", "Garantie 500 lei"],
+    images: [duotts1, duotts2, duotts3, duotts4, duotts5, duotts6],
   },
 ];
 
