@@ -29,16 +29,6 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40">
-      <div className="gradient-primary text-primary-foreground text-xs sm:text-sm">
-        <div className="container-page flex h-9 items-center justify-between gap-3">
-          <p className="truncate font-medium">Mobilitate urbana rapida · Vehicule pregatite imediat</p>
-          <a href={telLink()} className="hidden sm:inline-flex items-center gap-1.5 hover:underline">
-            <Phone className="h-3.5 w-3.5" />
-            <span className="tabular">{SITE.phoneDisplay}</span>
-          </a>
-        </div>
-      </div>
-
       <div
         className={cn(
           "border-b border-border bg-background/85 backdrop-blur-md transition-shadow",
