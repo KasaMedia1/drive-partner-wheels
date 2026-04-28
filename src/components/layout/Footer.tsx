@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
+import { Facebook, Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
 import { SITE } from "@/config/site";
 
 export function Footer() {
@@ -15,11 +15,8 @@ export function Footer() {
             Mobilitate urbana pentru curieri, soferi de ridesharing si deplasari zilnice in {SITE.city}.
           </p>
           <div className="mt-4 flex gap-2">
-            <a href={SITE.social.facebook} aria-label="Facebook" className="grid h-9 w-9 place-items-center rounded-md border border-border hover:border-primary hover:text-primary">
+            <a href={SITE.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="grid h-9 w-9 place-items-center rounded-md border border-border hover:border-primary hover:text-primary">
               <Facebook className="h-4 w-4" />
-            </a>
-            <a href={SITE.social.instagram} aria-label="Instagram" className="grid h-9 w-9 place-items-center rounded-md border border-border hover:border-primary hover:text-primary">
-              <Instagram className="h-4 w-4" />
             </a>
           </div>
         </div>
