@@ -3,7 +3,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const faqs = [
   {
     q: "Ce acte îmi trebuie pentru a închiria?",
-    a: "Pentru scuterele fără permis (50cc, limitate la 25 km/h) este nevoie doar de buletin – nu îți trebuie permis sau atestat. Pentru scutere 125cc ai nevoie de buletin și permis categoria A1, A2 sau B (obținut înainte de 2018). Pentru mașini: buletin, permis categoria B valabil de minim 1 an și vârsta minimă 21 ani. Trimiți pozele actelor pe WhatsApp și primești răspuns în maxim 1 oră.",
+    a: "Pentru scuterele fără permis (50cc, limitate la 25 km/h) este nevoie doar de buletin – nu îți trebuie permis sau atestat. Pentru scutere 125cc ai nevoie de buletin și permis categoria A1, A2 sau B (obținut înainte de 2018). Pentru mașini: buletin, permis categoria B valabil de minim 1 an. Trimiți pozele actelor pe WhatsApp și primești răspuns în maxim 1 oră.",
   },
   {
     q: "Care este garanția?",
