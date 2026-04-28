@@ -2,11 +2,11 @@
 export const SITE = {
   name: "DriveRent",
   city: "Bucuresti",
-  phoneDisplay: "+40 7xx xxx xxx",
-  phoneE164: "+40700000000", // placeholder
-  whatsappNumber: "40700000000", // placeholder, no plus
-  email: "contact@driverent.ro",
-  address: "Str. Exemplu 12, Bucuresti",
+  phoneDisplay: "+40 728 126 988",
+  phoneE164: "+40728126988",
+  whatsappNumber: "40728126988",
+  email: "drive.partner@yahoo.com",
+  address: "Calea Vitan Nr. 152, Sector 3",
   program: "Luni-Vineri 09:00-19:00 · Sambata 10:00-15:00",
   social: {
     facebook: "https://facebook.com/",
