@@ -45,7 +45,7 @@ export function Header() {
           scrolled && "shadow-card",
         )}
       >
-        <div className="container-page flex h-16 items-center justify-between gap-4">
+        <div className="container-page grid h-16 grid-cols-[1fr_auto_1fr] items-center gap-4">
           <Link to="/" className="flex items-center gap-2 font-display text-xl font-extrabold tracking-tight">
             <span className="grid h-8 w-8 place-items-center rounded-lg gradient-primary text-primary-foreground">
               DR
@@ -53,24 +53,33 @@ export function Header() {
             <span>Drive<span className="gradient-text">Rent</span></span>
           </Link>
 
-          <nav className="hidden xl:flex items-center gap-1">
-            {nav.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                className={({ isActive }) =>
-                  cn(
-                    "rounded-md px-3 py-2 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground hover:bg-muted",
-                    isActive && "text-foreground bg-muted",
-                  )
-                }
-              >
-                {item.label}
-              </NavLink>
-            ))}
-          </nav>
+          <div className="flex justify-center">
+            <Button
+              asChild
+              size="lg"
+              className="hidden sm:inline-flex gradient-primary text-primary-foreground font-bold shadow-elevate ring-2 ring-primary/30 hover:ring-primary/50 hover:scale-105 transition-all px-8"
+            >
+              <Link to="/inchiriere">Închiriază acum</Link>
+            </Button>
+          </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-end gap-2">
+            <nav className="hidden xl:flex items-center gap-1">
+              {nav.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  className={({ isActive }) =>
+                    cn(
+                      "rounded-md px-3 py-2 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground hover:bg-muted",
+                      isActive && "text-foreground bg-muted",
+                    )
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+            </nav>
             <a
               href={telLink()}
               className="hidden md:inline-flex items-center gap-2 rounded-md border border-border px-3 py-2 text-sm font-semibold tabular hover:border-primary hover:text-primary transition-colors"
@@ -78,9 +87,6 @@ export function Header() {
               <Phone className="h-4 w-4" />
               {SITE.phoneDisplay}
             </a>
-            <Button asChild size="sm" className="hidden sm:inline-flex">
-              <Link to="/inchiriere">Inchiriaza</Link>
-            </Button>
             <button
               aria-label="Meniu"
               className="xl:hidden grid h-10 w-10 place-items-center rounded-md border border-border"
