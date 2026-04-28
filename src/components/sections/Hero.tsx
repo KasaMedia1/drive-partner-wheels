@@ -28,10 +28,6 @@ export function Hero() {
           transition={{ duration: 0.7 }}
           className="max-w-xl lg:max-w-[52%]"
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-3 py-1 text-xs font-semibold backdrop-blur">
-            <span className="h-2 w-2 rounded-full bg-success" />
-            Disponibil acum in {SITE.city}
-          </span>
           <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
             Mobilitate urbana{" "}
             <span className="gradient-text">pentru curieri, ridesharing si naveta.</span>
