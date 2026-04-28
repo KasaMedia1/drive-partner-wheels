@@ -95,7 +95,7 @@ export function VehicleCard({ vehicle, index = 0, categorySlug }: Props) {
             <p className="font-display text-2xl font-extrabold tabular text-foreground">
               {vehicle.pricePerWeek}<span className="text-sm font-medium text-muted-foreground"> lei/sapt</span>
             </p>
-            <p className="text-[11px] text-muted-foreground tabular">{vehicle.pricePerDay} lei/zi</p>
+            
           </div>
         </div>
 
