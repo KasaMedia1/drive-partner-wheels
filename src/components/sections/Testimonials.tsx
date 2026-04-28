@@ -2,10 +2,12 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Star } from "lucide-react";
 
 const items = [
-  { name: "Andrei M.", role: "Sofer Uber din 2023", quote: "Am luat Corolla Hybrid si am redus consumul cu 40%. Cand am avut o pana, in 90 minute aveam alta masina la mine.", initials: "AM" },
-  { name: "Madalin P.", role: "Curier Glovo", quote: "Scuterul NIU electric ma scuteste de combustibil. Bateriile detasabile sunt salvarea pe ture lungi.", initials: "MP" },
-  { name: "Cristian D.", role: "Sofer Bolt", quote: "Contract clar, fara surprize. Am luat Logan Automat si fac in fiecare luna profit predictibil.", initials: "CD" },
-  { name: "Ioana T.", role: "Curier Wolt", quote: "E-bike-ul cargo Tenways e perfect pentru centrul Bucurestiului. Zero stres cu parcarea.", initials: "IT" },
+  { name: "Andrei M.", role: "Sofer Uber din 2023", quote: "Am luat Toyota Corolla Hybrid si consumul a scazut considerabil. Masina e impecabila si suportul e rapid cand am nevoie.", initials: "AM" },
+  { name: "Madalin P.", role: "Curier Glovo", quote: "Merg cu Sym Symphony 125 zilnic prin Bucuresti. Pornire instant, ture lungi fara probleme si service inclus.", initials: "MP" },
+  { name: "Cristian D.", role: "Sofer Bolt", quote: "Toyota Camry Hybrid e o investitie buna pentru oras. Confort de business, consum mic si clientii imi dau rating maxim.", initials: "CD" },
+  { name: "Ioana T.", role: "Curier Wolt", quote: "Cu Peugeot Kisbee fara permis am inceput sa livrez in 2 zile. 250 lei/saptamana si gata, sunt pe drum.", initials: "IT" },
+  { name: "Razvan S.", role: "Sofer Bolt", quote: "Am ales Toyota Aygo X pentru economie. La 400 lei/saptamana e cel mai bun raport calitate-pret pentru oras.", initials: "RS" },
+  { name: "Alex G.", role: "Curier Glovo", quote: "Honda PCX 125 e o bestie. Stabil, rapid si arata premium. Clientii ma observa de departe.", initials: "AG" },
 ];
 
 export function Testimonials() {
