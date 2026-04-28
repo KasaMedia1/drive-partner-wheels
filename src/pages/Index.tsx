@@ -4,7 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { RentalCategoriesPreview } from "@/components/sections/RentalCategoriesPreview";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { PremiumCoverage } from "@/components/sections/PremiumCoverage";
-import { HowItWorks } from "@/components/sections/HowItWorks";
+import { BecomeDriver } from "@/components/sections/BecomeDriver";
 import { ProcessDetailed } from "@/components/sections/ProcessDetailed";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Faq } from "@/components/sections/Faq";
@@ -34,7 +34,7 @@ const Index = () => {
       <WhyUs />
       <PremiumCoverage />
       <ProcessDetailed />
-      <HowItWorks />
+      <BecomeDriver />
       <Testimonials />
       <Faq />
       <FinalCta />
