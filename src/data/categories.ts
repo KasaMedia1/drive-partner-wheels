@@ -1,11 +1,12 @@
-import { Bike, Car, Gauge, KeyRound } from "lucide-react";
+import { Bike, Car, Gauge, KeyRound, Zap } from "lucide-react";
 import { fleet, Vehicle } from "@/data/fleet";
 import pcx from "@/assets/fleet/pcx-1.jpg";
 import breezy from "@/assets/fleet/breezy-1.jpg";
 import kisbee from "@/assets/fleet/kisbee-1.jpg";
 import corolla from "@/assets/fleet/corolla-1.jpg";
+import duotts from "@/assets/fleet/duotts-f20-1.jpg";
 
-export type RentalCategorySlug = "scutere-125" | "scutere-50" | "fara-permis" | "masini";
+export type RentalCategorySlug = "scutere-125" | "scutere-50" | "fara-permis" | "masini" | "biciclete-electrice";
 
 export interface RentalCategory {
   slug: RentalCategorySlug;
@@ -63,6 +64,17 @@ export const rentalCategories: RentalCategory[] = [
     desc: "Toyota Corolla si Camry Hybrid, Aygo X, Citroën C3 si ë-C3 electric. Consum mic, confort lung.",
     audience: "Recomandat pentru: soferi de ridesharing Uber si Bolt si pentru utilizare zilnica intensa.",
     filter: (v) => v.category === "masina",
+  },
+  {
+    slug: "biciclete-electrice",
+    title: "Biciclete electrice",
+    shortTitle: "Biciclete",
+    Icon: Zap,
+    image: duotts,
+    intro: "Biciclete electrice puternice cu autonomie mare, ideale pentru livrari urbane fara permis si fara costuri de combustibil.",
+    desc: "DUOTTS F20 cu motor 1000W, baterie 52V 27Ah si autonomie pana la 140 km. Suspensie completa pentru confort maxim.",
+    audience: "Recomandat pentru: curieri Glovo, Wolt, Bolt Food fara permis si livratori care vor costuri zero de combustibil.",
+    filter: (v) => v.category === "bicicleta",
   },
 ];
 
