@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: "Pot folosi vehiculul și în afara Bucureștiului?",
-    a: "Da, pe tot teritoriul României. Pentru ieșirile în afara țării este nevoie de aprobare scrisă în prealabil și de carte verde (asigurare internațională), pe care ți-o emitem noi.",
+    a: "Da, pe tot teritoriul României. Pentru ieșirile în afara țării este nevoie de aprobare scrisă în prealabil și de carte verde (asigurare internațională).",
   },
 ];
 
