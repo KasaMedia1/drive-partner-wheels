@@ -12,11 +12,11 @@ import { Testimonials } from "@/components/sections/Testimonials";
 const CalculatorUber = () => {
   const [hours, setHours] = useState(8);
   const [days, setDays] = useState(6);
-  // Castig mediu: 80-100 lei/ora -> folosim 90 lei/ora ca medie
-  const HOURLY_AVG = 90;
+  // Castig mediu: 50-70 lei/ora -> folosim 60 lei/ora ca medie
+  const HOURLY_AVG = 60;
   const monthly = Math.round(hours * days * 4 * HOURLY_AVG);
-  const monthlyMin = Math.round(hours * days * 4 * 80);
-  const monthlyMax = Math.round(hours * days * 4 * 100);
+  const monthlyMin = Math.round(hours * days * 4 * 50);
+  const monthlyMax = Math.round(hours * days * 4 * 70);
 
   return (
     <SiteLayout>
@@ -70,7 +70,7 @@ const CalculatorUber = () => {
               <p className="mt-2 text-sm font-semibold opacity-90 tabular">
                 Interval: {monthlyMin.toLocaleString("ro-RO")} – {monthlyMax.toLocaleString("ro-RO")} lei
               </p>
-              <p className="mt-1 text-xs opacity-80">Calculat la o medie de 80-100 lei/ora, in functie de oras, zona si ore de varf.</p>
+              <p className="mt-1 text-xs opacity-80">Calculat la o medie de 50-70 lei/ora, in functie de oras, zona si ore de varf.</p>
             </div>
           </motion.div>
         </div>
