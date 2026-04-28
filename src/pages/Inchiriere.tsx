@@ -22,7 +22,7 @@ const Inchiriere = () => {
             Alege categoria potrivita pentru tine.
           </h1>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            Patru categorii, zeci de modele. Apasa pe o categorie ca sa vezi vehiculele disponibile si specificatiile complete.
+            5 categorii de vehicule, modele pentru toate buzunarele și pentru orice nevoie. Apasa pe o categorie ca sa vezi vehiculele disponibile si specificatiile complete.
           </p>
         </div>
       </section>
