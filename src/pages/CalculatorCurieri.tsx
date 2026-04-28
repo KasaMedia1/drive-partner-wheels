@@ -71,28 +71,41 @@ const CalculatorCurieri = () => (
 
     <section className="py-16 bg-background-soft">
       <div className="container-page">
-        <div className="rounded-3xl border border-border bg-card p-8 shadow-card sm:p-12 grid gap-6 lg:grid-cols-3">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-primary">Cat economisesti</p>
-            <h2 className="mt-2 font-display text-3xl font-extrabold">vs. cumparat propriu</h2>
-            <p className="mt-3 text-sm text-muted-foreground">Costuri optimizate pentru utilizare zilnica, fara investitie initiala mare.</p>
+        <div className="rounded-3xl border border-border bg-card p-8 shadow-card sm:p-12">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-wider text-primary">De ce sa inchiriezi in loc sa cumperi</p>
+            <h2 className="mt-2 font-display text-3xl font-extrabold">Inchiriere DriveRent vs. vehicul cumparat</h2>
+            <p className="mt-3 text-muted-foreground">
+              Cand cumperi un scuter sau o bicicleta pentru livrari, platesti din start cateva mii de lei si tot tu te ocupi de service, piese si timpul pierdut la mecanic. La DriveRent platesti doar chiria saptamanala, iar restul costurilor sunt incluse.
+            </p>
           </div>
-          <div className="grid grid-cols-2 gap-6 lg:col-span-2">
-            <Stat label="Investitie initiala" plus="0 lei" minus="~ 8.000 lei" />
-            <Stat label="Service si reparatii" plus="Inclus" minus="500-1500 lei/an" />
-            <Stat label="Mentenanta periodica" plus="Inclus" minus="In sarcina ta" />
-            <Stat label="Suport tehnic" plus="Inclus" minus="0" />
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <Stat label="Cost de pornire" plus="0 lei" minus="~ 8.000 lei avans" hint="Pleci la drum azi, fara sa scoti bani din buzunar." />
+            <Stat label="Service si reparatii" plus="Incluse" minus="500-1.500 lei/an" hint="Daca se strica ceva, ne ocupam noi pe cheltuiala noastra." />
+            <Stat label="Revizii periodice" plus="Incluse" minus="Pe banii tai" hint="Schimb de ulei, frane, anvelope - toate incluse in chirie." />
+            <Stat label="Vehicul de schimb" plus="Inclus" minus="Stai pe loc" hint="Daca vehiculul intra in service, primesti altul ca sa nu pierzi ture." />
           </div>
+          <p className="mt-6 text-sm text-muted-foreground">
+            Pe scurt: zero investitie, zero batai de cap cu mecanicul si poti renunta oricand. Tu te concentrezi doar pe livrari si pe castig.
+          </p>
         </div>
 
-        <div className="mt-10 rounded-2xl border border-border bg-card p-6 sm:p-8">
-          <h3 className="font-display text-xl font-bold">Vrei sa devii curier pe Bolt, Glovo sau Wolt?</h3>
-          <p className="mt-3 text-muted-foreground max-w-2xl">
-            DriveRent iti ofera vehiculul necesar, iar pentru activarea efectiva ca livrator colaboram cu DrivePartner, partener dedicat care te ghideaza prin procesul complet de inscriere.
+        <div className="mt-10 rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-card p-6 sm:p-10 shadow-card">
+          <p className="text-sm font-semibold uppercase tracking-wider text-primary">Activare ca livrator</p>
+          <h3 className="mt-2 font-display text-3xl font-extrabold sm:text-4xl">Vrei sa devii livrator?</h3>
+          <p className="mt-4 text-muted-foreground max-w-2xl">
+            Noi iti dam vehiculul, iar pentru tot ce inseamna activarea efectiva pe Bolt Food, Glovo si Wolt colaboram cu <strong className="text-foreground">DrivePartner</strong> - partenerul nostru specializat in onboarding pentru livratori.
           </p>
-          <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-            <Button asChild><Link to="/inchiriere">Vezi vehiculele disponibile <ArrowRight className="h-4 w-4" /></Link></Button>
-            <Button asChild variant="outline"><Link to="/contact">Contacteaza-ne</Link></Button>
+          <p className="mt-3 text-muted-foreground max-w-2xl">
+            DrivePartner se ocupa de tot procesul: iti deschide contul de livrator, iti activeaza aplicatiile, te indruma cu actele necesare, iti ofera suport tehnic permanent si iti gestioneaza platile saptamanale direct in cont. Practic, in cateva zile esti gata de prima tura.
+          </p>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <Button asChild size="lg">
+              <a href="https://drivepartner.ro" target="_blank" rel="noopener noreferrer">
+                Mergi pe drivepartner.ro <ArrowRight className="h-4 w-4" />
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="lg"><Link to="/inchiriere">Vezi vehiculele disponibile</Link></Button>
           </div>
         </div>
       </div>
