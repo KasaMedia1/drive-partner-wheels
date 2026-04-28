@@ -36,7 +36,7 @@ const categories = [
     hash: "masini",
     title: "Masini hibride si electrice",
     Icon: Car,
-    desc: "Toyota Corolla si Camry Hybrid, Aygo X, Citroën C3 si ë-C3 electric. Consum mic, confort lung.",
+    desc: "Masini cu consum redus si confort pe termen lung. Perfecte pentru servicii de ride-sharing, plimbări urbane sau navetă.",
     audience: "Recomandat pentru: soferi Uber, Bolt si utilizare zilnica intensa.",
     image: corolla,
   },
