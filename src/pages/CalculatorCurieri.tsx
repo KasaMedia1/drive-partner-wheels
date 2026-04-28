@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Sparkles, Zap, Wallet, Headphones } from "lucide-react";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { Seo } from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { FinalCta } from "@/components/sections/FinalCta";
+import livratorImg from "@/assets/livrator-drivepartner.jpg";
 
 const compare = [
   { type: "Bicicleta electrica", autonomy: "60-90 km", speed: "25 km/h", capacity: "25-60 L", cost: "180 lei/sapt", best: "Centru oras, ture scurte" },
