@@ -115,20 +115,21 @@ const CalculatorCurieri = () => (
   </SiteLayout>
 );
 
-function Stat({ label, plus, minus }: { label: string; plus: string; minus: string }) {
+function Stat({ label, plus, minus, hint }: { label: string; plus: string; minus: string; hint?: string }) {
   return (
-    <div>
+    <div className="rounded-xl border border-border bg-background-soft p-4">
       <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">{label}</p>
-      <div className="mt-2 grid grid-cols-2 gap-3">
-        <div className="rounded-xl bg-success/15 px-3 py-2.5">
+      <div className="mt-3 grid grid-cols-2 gap-2">
+        <div className="rounded-lg bg-success/15 px-3 py-2.5">
           <p className="text-[10px] font-bold uppercase text-success-foreground">DriveRent</p>
           <p className="mt-0.5 font-display font-extrabold tabular">{plus}</p>
         </div>
-        <div className="rounded-xl border border-border px-3 py-2.5">
+        <div className="rounded-lg border border-border px-3 py-2.5">
           <p className="text-[10px] font-bold uppercase text-muted-foreground">Cumparat</p>
           <p className="mt-0.5 font-display font-extrabold tabular text-muted-foreground">{minus}</p>
         </div>
       </div>
+      {hint && <p className="mt-3 text-xs text-muted-foreground leading-relaxed">{hint}</p>}
     </div>
   );
 }
