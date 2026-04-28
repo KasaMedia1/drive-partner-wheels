@@ -9,7 +9,7 @@ export const SITE = {
   address: "Calea Vitan Nr. 152, Sector 3",
   program: "Luni-Vineri 09:00-19:00 · Sambata 10:00-15:00",
   social: {
-    facebook: "https://facebook.com/",
+    facebook: "https://www.facebook.com/profile.php?id=61581026780386",
     instagram: "https://instagram.com/",
     tiktok: "https://tiktok.com/",
   },
