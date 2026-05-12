@@ -1,6 +1,6 @@
 import { Bike, Car, Gauge, KeyRound, Zap } from "lucide-react";
 import { fleet, Vehicle } from "@/data/fleet";
-import pcx from "@/assets/fleet/pcx-1.jpg";
+import pcx from "@/assets/fleet/honda-pcx125-1.jpg";
 import breezy from "@/assets/fleet/breezy-1.jpg";
 import kisbee from "@/assets/fleet/kisbee-1.jpg";
 import corolla from "@/assets/fleet/corolla-1.jpg";
@@ -28,7 +28,7 @@ export const rentalCategories: RentalCategory[] = [
     Icon: Gauge,
     image: pcx,
     intro: "Modele puternice 125cc pentru utilizare intensa, ture lungi si trafic mixt urban si periurban. Permis A1 sau B obligatoriu.",
-    desc: "Honda PCX, SYM Symphony, Daytona Trevis si Jet X Pro. Putere si autonomie pentru ture lungi.",
+    desc: "Honda PCX 125, Aprilia SR 125 si Piaggio Liberty 125. Putere si autonomie pentru ture lungi.",
     audience: "Recomandat pentru: curieri Glovo, Wolt, Bolt Food cu volum constant si soferi care au nevoie de viteza si autonomie.",
     filter: (v) => v.category === "scuter" && v.scooterClass === "125cc",
   },

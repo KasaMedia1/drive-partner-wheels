@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Bike, Car, Gauge, KeyRound, Zap } from "lucide-react";
-import pcx from "@/assets/fleet/pcx125.jpg";
+import pcx from "@/assets/fleet/honda-pcx125-1.jpg";
 import breezy from "@/assets/fleet/breezy.jpg";
 import kisbee from "@/assets/fleet/kisbee.jpg";
 import corolla from "@/assets/fleet/corolla.jpg";
@@ -12,7 +12,7 @@ const categories = [
     hash: "scutere-125",
     title: "Scutere 125cc",
     Icon: Gauge,
-    desc: "Honda PCX, SYM Symphony, Daytona Trevis si Jet X Pro. Putere si autonomie pentru ture lungi.",
+    desc: "Honda PCX 125, Aprilia SR 125 si Piaggio Liberty 125. Putere si autonomie pentru ture lungi.",
     audience: "Recomandat pentru: curieri Glovo, Wolt, Bolt Food cu volum constant.",
     image: pcx,
   },
