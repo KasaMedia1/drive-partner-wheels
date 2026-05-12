@@ -37,7 +37,7 @@ export const rentalCategories: RentalCategory[] = [
     title: "Scutere 50cc",
     shortTitle: "50cc",
     Icon: Bike,
-    image: breezy,
+    image: agility50,
     intro: "Compacte, agile si economice. Ideale pentru livrari rapide in trafic aglomerat si pentru cei aflati la inceput. Necesita permis AM.",
     desc: "Kymco Agility, SYM Symphony si X Pro. Compacte, economice, agile in trafic.",
     audience: "Recomandat pentru: livrari urbane scurte si curieri incepatori care vor sa intre rapid in activitate.",
