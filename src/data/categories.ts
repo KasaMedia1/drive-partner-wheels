@@ -1,7 +1,7 @@
 import { Bike, Car, Gauge, KeyRound, Zap } from "lucide-react";
 import { fleet, Vehicle } from "@/data/fleet";
 import pcx from "@/assets/fleet/honda-pcx125-1.jpg";
-import breezy from "@/assets/fleet/breezy-1.jpg";
+import agility50 from "@/assets/fleet/agility50-1.jpg";
 import kisbee from "@/assets/fleet/kisbee-1.jpg";
 import corolla from "@/assets/fleet/corolla-1.jpg";
 import duotts from "@/assets/fleet/duotts-f20-1.jpg";

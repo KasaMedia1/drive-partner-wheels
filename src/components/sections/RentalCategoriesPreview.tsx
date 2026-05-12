@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Bike, Car, Gauge, KeyRound, Zap } from "lucide-react";
 import pcx from "@/assets/fleet/honda-pcx125-1.jpg";
-import breezy from "@/assets/fleet/breezy.jpg";
+import agility50 from "@/assets/fleet/agility50-1.jpg";
 import kisbee from "@/assets/fleet/kisbee.jpg";
 import corolla from "@/assets/fleet/corolla.jpg";
 import duotts from "@/assets/fleet/duotts-f20-1.jpg";
@@ -22,7 +22,7 @@ const categories = [
     Icon: Bike,
     desc: "Kymco Agility, SYM Symphony si X Pro. Compacte, economice, agile in trafic.",
     audience: "Recomandat pentru: curieri activi si zone urbane dense.",
-    image: breezy,
+    image: agility50,
   },
   {
     hash: "fara-permis",

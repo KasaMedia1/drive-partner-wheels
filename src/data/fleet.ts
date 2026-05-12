@@ -26,8 +26,6 @@ import like2 from "@/assets/fleet/like-2.jpg";
 import retro1 from "@/assets/fleet/retro-1.jpg";
 import retro2 from "@/assets/fleet/retro-2.jpg";
 import retro3 from "@/assets/fleet/retro-3.jpg";
-import breezy1 from "@/assets/fleet/breezy-1.jpg";
-import breezy2 from "@/assets/fleet/breezy-2.jpg";
 import agility50_1 from "@/assets/fleet/agility50-1.jpg";
 import agility50_2 from "@/assets/fleet/agility50-2.jpg";
 import symphony50_1 from "@/assets/fleet/symphony50-1.jpg";
