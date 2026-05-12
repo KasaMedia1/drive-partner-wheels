@@ -1,7 +1,7 @@
 import { Bike, Car, Gauge, KeyRound, Zap } from "lucide-react";
 import { fleet, Vehicle } from "@/data/fleet";
 import pcx from "@/assets/fleet/honda-pcx125-1.jpg";
-import breezy from "@/assets/fleet/breezy-1.jpg";
+import agility50 from "@/assets/fleet/agility50-1.jpg";
 import kisbee from "@/assets/fleet/kisbee-1.jpg";
 import corolla from "@/assets/fleet/corolla-1.jpg";
 import duotts from "@/assets/fleet/duotts-f20-1.jpg";
@@ -37,9 +37,9 @@ export const rentalCategories: RentalCategory[] = [
     title: "Scutere 50cc",
     shortTitle: "50cc",
     Icon: Bike,
-    image: breezy,
+    image: agility50,
     intro: "Compacte, agile si economice. Ideale pentru livrari rapide in trafic aglomerat si pentru cei aflati la inceput. Necesita permis AM.",
-    desc: "Motron Breezy, Kymco Agility, SYM Symphony si X Pro. Compacte, economice, agile in trafic.",
+    desc: "Kymco Agility, SYM Symphony si X Pro. Compacte, economice, agile in trafic.",
     audience: "Recomandat pentru: livrari urbane scurte si curieri incepatori care vor sa intre rapid in activitate.",
     filter: (v) => v.category === "scuter" && v.scooterClass === "50cc",
   },

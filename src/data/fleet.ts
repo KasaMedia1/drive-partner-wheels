@@ -26,8 +26,6 @@ import like2 from "@/assets/fleet/like-2.jpg";
 import retro1 from "@/assets/fleet/retro-1.jpg";
 import retro2 from "@/assets/fleet/retro-2.jpg";
 import retro3 from "@/assets/fleet/retro-3.jpg";
-import breezy1 from "@/assets/fleet/breezy-1.jpg";
-import breezy2 from "@/assets/fleet/breezy-2.jpg";
 import agility50_1 from "@/assets/fleet/agility50-1.jpg";
 import agility50_2 from "@/assets/fleet/agility50-2.jpg";
 import symphony50_1 from "@/assets/fleet/symphony50-1.jpg";
@@ -338,29 +336,6 @@ export const fleet: Vehicle[] = [
   },
 
   // ============ SCUTERE 50CC ============
-  {
-    id: "motron-breezy-50",
-    slug: "motron-breezy-50",
-    name: "Motron Breezy 50",
-    year: 2024,
-    category: "scuter",
-    scooterClass: "50cc",
-    audience: ["curieri"],
-    fuel: "benzina",
-    autonomyKm: 220,
-    consumptionLper100: 2.4,
-    cargoLiters: 30,
-    topSpeedKmh: 45,
-    pricePerDay: 45,
-    pricePerWeek: 250,
-    pricePerMonth: 900,
-    availability: "disponibil",
-    shortDescription: "Scuter 50cc modern, perfect pentru livrari urbane si trafic aglomerat.",
-    highlights: ["Design modern", "Costuri reduse", "Manevrabilitate excelenta"],
-    included: COMMON_INCLUDED_SCOOTER,
-    rules: ["Permis AM/A1", "Garantie 600 lei"],
-    images: [breezy1, breezy2],
-  },
   {
     id: "kymco-agility-50-2024",
     slug: "kymco-agility-50-2024",
