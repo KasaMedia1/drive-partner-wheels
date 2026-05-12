@@ -20,7 +20,7 @@ const categories = [
     hash: "scutere-50",
     title: "Scutere 50cc",
     Icon: Bike,
-    desc: "Motron Breezy, Kymco Agility, SYM Symphony si X Pro. Compacte, economice, agile in trafic.",
+    desc: "Kymco Agility, SYM Symphony si X Pro. Compacte, economice, agile in trafic.",
     audience: "Recomandat pentru: curieri activi si zone urbane dense.",
     image: breezy,
   },

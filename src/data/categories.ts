@@ -39,7 +39,7 @@ export const rentalCategories: RentalCategory[] = [
     Icon: Bike,
     image: breezy,
     intro: "Compacte, agile si economice. Ideale pentru livrari rapide in trafic aglomerat si pentru cei aflati la inceput. Necesita permis AM.",
-    desc: "Motron Breezy, Kymco Agility, SYM Symphony si X Pro. Compacte, economice, agile in trafic.",
+    desc: "Kymco Agility, SYM Symphony si X Pro. Compacte, economice, agile in trafic.",
     audience: "Recomandat pentru: livrari urbane scurte si curieri incepatori care vor sa intre rapid in activitate.",
     filter: (v) => v.category === "scuter" && v.scooterClass === "50cc",
   },
